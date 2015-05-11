@@ -67,7 +67,7 @@ describe "Creating todo lists" do
 		expect(page).to_not have_content("Grocery list")
 	end
 
-	it "displays an error when the todo list has no description" do
+	it "displays an error when the todo list has a title less than 5 characters" do
 		expect(TodoList.count).to eq(0)
 
 		visit "/todo_lists"
